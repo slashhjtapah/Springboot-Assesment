@@ -1,14 +1,10 @@
 package service.impl;
 
-import entity.Menu;
 import org.springframework.stereotype.Service;
 import repository.MenuRepository;
-import service.MenuService;
-
-import java.util.List;
 
 @Service
-public class MenuServiceImpl implements MenuService {
+public class MenuServiceImpl {
 
     private final MenuRepository menuRepository;
 
@@ -17,8 +13,4 @@ public class MenuServiceImpl implements MenuService {
         this.menuRepository = menuRepository;
     }
 
-    @Override
-    public List<Menu> getAllMenus() {
-        return menuRepository.findAll();
-    }
 }
