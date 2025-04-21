@@ -1,7 +1,6 @@
 package com.accenturebe.onlinefooddelivery.controller;
 
 import com.accenturebe.onlinefooddelivery.dto.CustomerDTO;
-import com.accenturebe.onlinefooddelivery.entity.Customer;
 import com.accenturebe.onlinefooddelivery.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +14,6 @@ public class CustomerController {
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }
-
-//    public CustomerController(CustomerService customerService) {
-//        this.customerService = customerService;
-//    }
 
     @PostMapping("/create")
     public ResponseEntity<CustomerDTO> createCustomer(@RequestBody CustomerDTO customer) {

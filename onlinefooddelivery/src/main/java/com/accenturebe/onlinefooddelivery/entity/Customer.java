@@ -1,10 +1,7 @@
 package com.accenturebe.onlinefooddelivery.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,20 +12,21 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "customer")
 public class Customer {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "customer_id")
     private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "address")
     private String address;
+
+    @Column(name = "phone_number")
     private Integer phone;
 
-    // constructor
-//    public Customer(Long id, String name, String address, Integer phone){
-//        this.id = id;
-//        this.name = name;
-//        this.address = address;
-//        this.phone = phone;
-//    }
 }
