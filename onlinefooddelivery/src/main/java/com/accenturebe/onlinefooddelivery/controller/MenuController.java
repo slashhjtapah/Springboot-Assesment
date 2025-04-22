@@ -17,13 +17,29 @@ public class MenuController {
         this.menuService = menuService;
     }
 
+    @GetMapping("/{menuId}")
+    public ResponseEntity<MenuDTO> getMenuById(@PathVariable Long menuId){
+        MenuDTO getMenu = menuService.getMenuById(menuId);
+        if (getMenu == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();  // 404 Not Found
+        }
+        return ResponseEntity.ok(getMenu);
+    }
+
     @PostMapping("/create")
     public ResponseEntity<MenuDTO> createMenu(@RequestBody MenuDTO menu){
         MenuDTO createdMenu = menuService.createMenu(menu);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMenu);
     }
 
-    @PostMapping("/delete/{menuId}")
+    @PutMapping("/{menuId}")
+    public ResponseEntity<MenuDTO> updateMenu(@PathVariable Long menuId, @RequestBody MenuDTO menu){
+        MenuDTO updatedMenu = menuService.updateMenu(menuId, menu);
+        return ResponseEntity.ok(updatedMenu);
+    }
+
+
+    @DeleteMapping("/delete/{menuId}")
     public ResponseEntity<Void> deleteMenu(@PathVariable Long menuId){
         menuService.deleteMenu(menuId);
         return ResponseEntity.ok().build();
