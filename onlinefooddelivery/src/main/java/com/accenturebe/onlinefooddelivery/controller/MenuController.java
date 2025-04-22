@@ -1,6 +1,7 @@
 package com.accenturebe.onlinefooddelivery.controller;
 
 import com.accenturebe.onlinefooddelivery.dto.MenuDTO;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +28,7 @@ public class MenuController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<MenuDTO> createMenu(@RequestBody MenuDTO menu){
+    public ResponseEntity<MenuDTO> createMenu(@RequestBody @Valid MenuDTO menu){
         MenuDTO createdMenu = menuService.createMenu(menu);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMenu);
     }
