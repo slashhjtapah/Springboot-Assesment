@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "restaurant")
 public class Restaurant {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "restaurant_id")
@@ -28,9 +29,4 @@ public class Restaurant {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "rating")
-    private double rating;
-
-    @Column(name = "cuisine_type")
-    private String cuisineType;
 }
