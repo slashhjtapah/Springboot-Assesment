@@ -42,7 +42,6 @@ public class GlobalExceptionHandler {
                 .body(e.getMessage());
     }
 
-
     @ExceptionHandler(MenuNotFoundException.class)
     public ResponseEntity<Object> handleMentyuNotFound(MenuNotFoundException e){
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
@@ -60,6 +59,5 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
                 .body(e.getMessage());
     }
-
 
 }

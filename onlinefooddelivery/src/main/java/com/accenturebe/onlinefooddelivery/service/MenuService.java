@@ -53,7 +53,6 @@ public class MenuService {
 
         menu.setName(request.getName());
         menu.setPrice(request.getPrice());
-
         Menu updatedMenu = menuRepository.save(menu);
         return menuMapper.toMenuDTO(updatedMenu);
     }

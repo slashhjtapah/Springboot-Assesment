@@ -4,7 +4,6 @@ import com.accenturebe.onlinefooddelivery.dto.MenuDTO;
 import com.accenturebe.onlinefooddelivery.service.MenuService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,7 +37,7 @@ public class MenuController {
     }
 
     @PutMapping("/update/{menuId}")
-    public ResponseEntity<MenuDTO> updateMenu(@PathVariable Long menuId, @RequestBody MenuDTO menu){
+    public ResponseEntity<MenuDTO> updateMenu(@PathVariable Long menuId, @RequestBody @Valid MenuDTO menu){
         MenuDTO updatedMenu = menuService.updateMenu(menuId, menu);
         return ResponseEntity.ok(updatedMenu);
     }
