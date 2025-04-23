@@ -1,12 +1,15 @@
 package com.accenturebe.onlinefooddelivery.controller;
 
 import com.accenturebe.onlinefooddelivery.dto.MenuDTO;
+import com.accenturebe.onlinefooddelivery.service.MenuService;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.accenturebe.onlinefooddelivery.service.MenuService;
 
+@Slf4j
 @RestController
 @RequestMapping("/menu")
 public class MenuController {
@@ -28,8 +31,9 @@ public class MenuController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<MenuDTO> createMenu(@RequestBody @Valid MenuDTO menu){
+    public ResponseEntity<?> createMenu(@RequestBody @Valid MenuDTO menu){
         MenuDTO createdMenu = menuService.createMenu(menu);
+        log.info("Created Menu {}", createdMenu.getName());
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMenu);
     }
 
