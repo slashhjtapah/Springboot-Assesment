@@ -1,0 +1,31 @@
+2025-04-23T16:17:38.978+08:00  INFO 12528 --- [onlinefooddelivery] [main] c.a.o.OnlinefooddeliveryApplication      : Starting OnlinefooddeliveryApplication using Java 17.0.12 with PID 12528 (C:\Users\aimi.n.helwany.had\Documents\Springboot-Assesment\onlinefooddelivery\target\classes started by aimi.n.helwany.had in C:\Users\aimi.n.helwany.had\Documents\Springboot-Assesment)
+2025-04-23T16:17:38.983+08:00  INFO 12528 --- [onlinefooddelivery] [main] c.a.o.OnlinefooddeliveryApplication      : No active profile set, falling back to 1 default profile: "default"
+2025-04-23T16:17:40.507+08:00  INFO 12528 --- [onlinefooddelivery] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-23T16:17:40.651+08:00  INFO 12528 --- [onlinefooddelivery] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 4 JPA repository interfaces.
+2025-04-23T16:17:42.564+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2025-04-23T16:17:42.582+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-23T16:17:42.582+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2025-04-23T16:17:42.693+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-23T16:17:42.694+08:00  INFO 12528 --- [onlinefooddelivery] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3629 ms
+2025-04-23T16:17:43.245+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-23T16:17:43.508+08:00  INFO 12528 --- [onlinefooddelivery] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2025-04-23T16:17:43.669+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-23T16:17:44.196+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-23T16:17:44.243+08:00  INFO 12528 --- [onlinefooddelivery] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-23T16:17:44.545+08:00  INFO 12528 --- [onlinefooddelivery] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@543da15
+2025-04-23T16:17:44.549+08:00  INFO 12528 --- [onlinefooddelivery] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-23T16:17:44.623+08:00  WARN 12528 --- [onlinefooddelivery] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-23T16:17:44.625+08:00  WARN 12528 --- [onlinefooddelivery] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-23T16:17:46.310+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.accenturebe.onlinefooddelivery.entity.Rider (class must be instantiated by Interceptor)
+2025-04-23T16:17:46.654+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-23T16:17:46.753+08:00  INFO 12528 --- [onlinefooddelivery] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-23T16:17:48.374+08:00  WARN 12528 --- [onlinefooddelivery] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-23T16:17:50.232+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-04-23T16:17:50.517+08:00  INFO 12528 --- [onlinefooddelivery] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+2025-04-23T16:17:50.554+08:00  INFO 12528 --- [onlinefooddelivery] [main] c.a.o.OnlinefooddeliveryApplication      : Started OnlinefooddeliveryApplication in 12.537 seconds (process running for 13.752)
+2025-04-23T16:33:29.407+08:00  INFO 12528 --- [onlinefooddelivery] [http-nio-8084-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-23T16:33:29.408+08:00  INFO 12528 --- [onlinefooddelivery] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-23T16:33:29.411+08:00  INFO 12528 --- [onlinefooddelivery] [http-nio-8084-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-04-23T16:45:39.165+08:00  INFO 12528 --- [onlinefooddelivery] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-23T16:45:39.169+08:00  INFO 12528 --- [onlinefooddelivery] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-23T16:45:39.185+08:00  INFO 12528 --- [onlinefooddelivery] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
